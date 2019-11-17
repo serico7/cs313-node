@@ -8,6 +8,6 @@ var app = express()
 app.use(express.static('public'))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
-app.get('/', (req, res) => { res.sendfile(`${STATIC_DIR}/index.html`); })
+app.get('/', (req, res) => { res.sendfile(`public/week09.html`); })
 app.get('/getRate', (req, res) => { week09.getRate(req, res) })
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
